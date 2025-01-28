@@ -1,0 +1,62 @@
+.update-product {
+    max-width: 600px; // Set a max width for the form
+    margin: 20px auto; // Center the form on the page
+    padding: 20px; // Add padding around the form
+    border: 1px solid #ddd; // Light border around the form
+    border-radius: 8px; // Rounded corners
+    background-color: #f9f9f9; // Light background color
+  
+    h2 {
+      text-align: center; // Center the heading
+      color: #08417f; // Heading color
+      margin-bottom: 20px; // Space below the heading
+    }
+  
+    .form-group {
+      margin-bottom: 15px; // Space between form groups
+  
+      label {
+        display: block; // Make label block to align with inputs
+        margin-bottom: 5px; // Space below the label
+        color: #333; // Label text color
+        font-weight: bold; // Bold label
+      }
+  
+      input, textarea {
+        width: 100%; // Full width of the container
+        padding: 10px; // Padding inside the input
+        border: 1px solid #ccc; // Light border
+        border-radius: 4px; // Rounded corners
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); // Subtle shadow
+        font-size: 16px; // Font size
+        color: #333; // Input text color
+  
+        &:focus {
+          border-color: #08417f; // Change border color on focus
+          outline: none; // Remove default outline
+          box-shadow: 0 0 5px rgba(0, 132, 255, 0.5); // Shadow effect on focus
+        }
+      }
+  
+      textarea {
+        height: 100px; // Set a height for the textarea
+        resize: none; // Disable resizing
+      }
+    }
+  
+    button {
+      background-color: #08417f; // Button background color
+      color: white; // Button text color
+      border: none; // Remove border
+      border-radius: 5px; // Rounded corners
+      padding: 10px 15px; // Padding for button
+      cursor: pointer; // Pointer on hover
+      font-size: 16px; // Font size
+      transition: background-color 0.3s; // Smooth transition
+  
+      &:hover {
+        background-color: #255a9c; // Darker color on hover
+      }
+    }
+  }
+  

@@ -1,0 +1,16 @@
+.item-container {
+    text-align: center;
+  
+    .item {
+      width: 144px;
+      height: 144px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  
+    p {
+      margin-top: 8px; /* Adjust as needed */
+    }
+  }
+  
+  

@@ -1,0 +1,79 @@
+<section class="items">
+    <div *ngIf="successMessageVisible" class="success-popup">
+        <p>Item added successfully!</p>
+      </div>
+    <div class="item" *ngFor="let product of products">
+      <div class="offer-label">
+        <span class="offer-text">12% OFF</span>
+      </div>
+      <img [src]="product.image" [alt]="product.name">
+      <h4>{{ product.name }}</h4>
+      <p class="compact">Wt: 500g</p>
+      <p class="compact">Rating: ★★★★☆</p>
+      <p class="compact">Price: $5.99</p>
+      
+      <div class="button-group">
+        <!-- Add To Cart Button -->
+        <button class="btn btn-primary" (click)="addToCart(product)">Add To Cart</button>
+        <button class="btn btn-primary" (click)="openDetails(product)">Order</button>
+      </div>
+    </div>
+  </section>
+
+             <!-- Conditional Details Section -->
+   <!-- Background overlay -->
+<div class="overlay" *ngIf="selectedProduct"></div>
+
+<!-- Popup details section -->
+<div *ngIf="selectedProduct" class="details-section">
+  <!-- Details content here (price, shipping info, payment info, etc.) -->
+</div>
+
+  <div *ngIf="selectedProduct" class="details-section">
+    <!-- Exchange and Price Details -->
+    <div class="price-details">
+        <!-- Correct usage -->
+        <button class="btn-close" (click)="closePriceDetails()" routerLink="/papad">×</button>
+
+      <h4>With Exchange</h4>
+      <p>Up to <strong>₹70.00 off</strong></p>
+      <h4>Without Exchange</h4>
+      <p><strong>₹670</strong> <span class="discounted-price">₹490.00</span></p>
+    </div>
+  
+    <!-- Shipping and Delivery Info -->
+    <div class="shipping-info">
+      <p><strong>Fulfilled</strong><br>FREE scheduled delivery as soon as 4 Days from Now.</p>
+      <p>Delivering to Bhopal 462030 - <a href="#">Update location</a></p>
+      <p>In stock</p>
+    </div>
+  
+    <!-- Payment Info -->
+    <div class="payment-info">
+      <p><strong>Payment</strong><br>Secure transaction. Your information is encrypted during transmission.</p>
+    </div>
+  
+    <!-- Quantity Selection -->
+    <div class="quantity-container">
+      <button class="quantity-button" (click)="decreaseQuantity()">-</button>
+      <input 
+        type="number" 
+        [(ngModel)]="quantity" 
+        class="quantity-input" 
+        [min]="1" 
+        [max]="maxQuantity" 
+        (input)="onQuantityChange()"
+      />
+      <button class="quantity-button" (click)="increaseQuantity()">+</button>
+    </div>
+  
+    <!-- Total Price -->
+    <div class="total-price">
+      <p><strong>Total: </strong>₹{{ quantity * 490  }}</p>
+      <!-- | currency -->
+    </div>
+  
+    <!-- Checkout Button -->
+    <button class="btn-go-to-checkout" (click)="goToCheckout()" routerLink="/check-out">Proceed to Checkout</button>
+  </div>
+  

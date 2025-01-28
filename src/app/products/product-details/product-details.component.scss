@@ -1,0 +1,26 @@
+.product-details {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .product-details img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .price {
+    font-size: 24px;
+    color: #b12704; /* Similar to Amazon's price style */
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .actions input {
+    width: 50px;
+    margin-right: 10px;
+  }
+  

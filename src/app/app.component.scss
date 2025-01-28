@@ -1,0 +1,147 @@
+$primary-color: orange;
+$text-color: white;
+
+.navbar {
+  background-color: $primary-color;
+  position: sticky; /* Sticky positioning */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensures it stays above other content */
+  background-color: white; /* Optional: background color to make the navbar visible over other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to make the navbar stand out */
+
+  .nav-link {
+    color: $text-color;
+
+    &.active {
+      color: darken($text-color, 10%); // Slightly darker for active state
+    }
+
+    &:hover {
+      color: lighten($text-color, 10%); // Lighten on hover
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary-color;
+    border-color: darken($primary-color, 10%);
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 15%);
+    }
+  }
+}
+
+.product-item-content { 
+  border: 1px solid var(--surface-d); 
+  border-radius: 3px; 
+  margin: 0.3rem; 
+  text-align: center; 
+  padding: 2rem 0; 
+} 
+
+.product-image { 
+  width: 50%; 
+  box-shadow: 0 3px 6px rgba(36, 108, 223, 0.16),  
+      0 3px 6px rgba(0, 0, 0, 0.23); 
+}
+/* styles.css */
+.navbar {
+  display: flex;
+  align-items: center;  /* Vertically center the items */
+}
+
+.logo {
+  width: 50px;  /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between logo and text/items */
+  // margin-left: 10px;
+}
+
+/* styles.css or component-specific CSS file */
+.navbar {
+  height: 60px; /* Adjust as needed */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  padding: 0 15px; /* Add padding for spacing */
+  background-color: #08347f; /* Example background color */
+}
+
+/* styles.css or your component-specific CSS file */
+
+/* Button styles */
+.navbar .btn-primary {
+  background-color: #105682; /* New button background color */
+  border-color: #dde4eb; /* New button border color */
+  color: white; /* Button text color */
+}
+
+.navbar .btn-primary:hover {
+  background-color: orange; /* Original navbar color on hover */
+  border-color: #08347f; /* Original navbar border color on hover */
+}
+
+.navbar .nav-link {
+  color: #e3e8f2; /* Nav link color */
+}
+
+.navbar .nav-link:hover {
+  color: orange; /* Darker shade on hover */
+  border-color: #dde4eb;
+}
+
+// #08347f
+
+.custom-icon {
+  font-size: 40px;          /* Set icon size */
+  color: white;             /* Default color (white) for the icon */
+  margin-right: 20px;       /* Add space to the right of the icon (adjust as needed) */
+  -webkit-mask-image: linear-gradient(to right, orange 50%, white 50%); /* Mask to create a half-half effect */
+  mask-image: linear-gradient(to right, orange 50%, white 50%); /* For non-webkit browsers */
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;     /* Ensure the mask covers the entire icon */
+}
+
+
+.d-flex {
+  display: flex;           /* Ensures the form uses flexbox layout */
+  align-items: center;     /* Vertically center the button and icon */
+}
+
+.btn {
+  margin-left: 10px;       /* Add space to the left of the button (adjust as needed) */
+}
+
+.custom-icon {
+  font-size: 30px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+
+  .cart-count {
+    position: absolute;
+    top: -5px; /* Adjusted to move the count a little closer to the icon */
+    right: -8px; /* Slightly adjusted to align better */
+    background-color: #ff5733;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px; /* Increased padding for better visual space */
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+    /* Optional: Add a hover effect */
+    &:hover {
+      background-color: #ff2a00; /* Change the color on hover */
+    }
+  }
+}
+
+.navbar-brand {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;  /* Adjust this value to control the roundness */
+  object-fit: cover;    /* Ensures the image fits within the container without distortion */
+}
+

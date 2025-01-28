@@ -1,0 +1,20 @@
+<!-- First Stage: Order Processing -->
+<div *ngIf="!orderConfirmed" class="order-confirmed-container">
+    <h3 class="confirmation-message">Order Processing!</h3>
+    <p>Your order is in processing....please wait some time. Your order will be done soon.</p>
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" [style.width]="progressBarWidth + '%'"></div>
+    </div>
+  </div>
+  
+  <!-- Second Stage: Order Confirmed -->
+  <div *ngIf="orderConfirmed" class="order-confirmed-container">
+    <h3 class="confirmation-message">Order Confirmed!</h3>
+    <p>Your order has been placed successfully. You will receive a confirmation email shortly.</p>
+    
+    <!-- Close button, only shown after confirmation -->
+    <button class="btn-close" (click)="closeConfirmation()" routerLink="/papad">Close</button>
+  </div>
+  

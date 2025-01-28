@@ -1,0 +1,439 @@
+/* Overlay for background blur effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+  backdrop-filter: blur(5px); /* Apply blur to background */
+  z-index: 999; /* Overlay appears above everything */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Checkout Popup container */
+.checkout-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure the popup appears above the overlay */
+  width: 80%;
+  max-width: 600px;
+  opacity: 0;
+  animation: popIn 0.4s forwards; /* Smooth popup animation */
+}
+
+/* Animation for popup */
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Product Details */
+.product-info {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Button styling */
+.btn-checkout {
+  background-color: darkblue; /* Green button */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-checkout:disabled {
+  background-color: #ccc; /* Grey when disabled */
+  cursor: not-allowed;
+}
+
+/* Styling for total price and discounts */
+.total-price h4 {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* Shipping and Payment Information */
+.shipping-info,
+.payment-info {
+  margin-top: 20px;
+}
+
+.shipping-info input,
+.payment-info input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.payment-info label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Order Confirmation */
+.order-confirmation {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Total Price styling */
+.total-price p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  z-index: 1000;
+}
+
+.checkout-container {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 20px;
+  z-index: 1001; /* To appear above the overlay */
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the button */
+.centered-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Style for the Proceed to Checkout Button */
+.btn-proceed {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px; /* Make the button round */
+  border: none;
+  background-color: #114883;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn-proceed:hover {
+  background-color: #0056b3; /* Darker shade when hovered */
+}
+
+/* Overlay styling */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+  z-index: 1000;
+}
+
+/* Checkout popup container */
+.checkout-container {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 20px;
+  z-index: 1001;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Checkout container */
+.checkout-container {
+  position: fixed;
+  top: 80px; /* Adjusted to 80px, assuming your navbar height is 60px */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 20px;
+  z-index: 1001;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Centering the proceed button */
+.centered-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensures the button is centered vertically */
+}
+
+.btn-proceed {
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-proceed:hover {
+  background-color: orange;
+}
+
+/* Progress Bar Container */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 5px;
+  background-color: orange;
+  width: 0%;
+  transition: width 0.5s;
+}
+
+/* Checkout Popup */
+.checkout-container {
+  position: fixed;
+  top: 10%; /* Slightly below the top of the page */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 20px;
+  z-index: 1001;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Overlay for background blur */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* Center the button */
+.centered-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Style for the Proceed to Checkout Button */
+.btn-proceed {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px; /* Make the button round */
+  border: none;
+  background-color: #150e7a;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn-proceed:hover {
+  background-color: orange; /* Darker shade when hovered */
+}
+
+/* Overlay for background blur effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+  backdrop-filter: blur(5px); /* Apply blur to background */
+  z-index: 999; /* Overlay appears above everything */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Checkout Popup container */
+.checkout-container {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to the center */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Ensure the popup appears above the overlay */
+  width: 80%;
+  max-width: 600px;
+  opacity: 0;
+  animation: popIn 0.4s forwards; /* Smooth popup animation */
+}
+
+/* Animation for popup */
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Progress Bar Container */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to the center */
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 5px;
+  background-color: orange;
+  width: 0%;
+  transition: width 0.5s; /* Smooth transition for the progress bar */
+}
+
+/* Product Details */
+.product-info {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Button styling */
+.btn-checkout {
+  background-color: #06118b; /* Green button */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-checkout:disabled {
+  background-color: #ccc; /* Grey when disabled */
+  cursor: not-allowed;
+}
+
+/* Styling for total price and discounts */
+.total-price h4 {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* Shipping and Payment Information */
+.shipping-info,
+.payment-info {
+  margin-top: 20px;
+}
+
+.shipping-info input,
+.payment-info input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.payment-info label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Order Confirmation */
+.order-confirmation {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Total Price styling */
+.total-price p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.btn-close {
+  position: fixed;    /* Fixed position relative to the viewport */
+  top: 20px;          /* Distance from the top */
+  right: 20px;        /* Distance from the right */
+  background: transparent; /* No background */
+  border: none;       /* Remove border */
+  font-size: 24px;     /* Adjust font size of the "×" */
+  color: black;        /* Set the text color */
+  cursor: pointer;    /* Change the cursor to pointer on hover */
+  padding: 0;          /* Remove any padding */
+}
+
+body {
+  margin: 0;           /* Remove any body margin */
+}

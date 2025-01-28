@@ -1,0 +1,259 @@
+/* Main container for items */
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+}
+
+/* Each item */
+.item {
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Reduced padding */
+  transition: transform 0.3s ease;
+  max-width: 100%; /* Allow item to expand fully in grid cell */
+  margin: 10px;
+}
+
+/* Hover effect to lift the item */
+.item:hover {
+  transform: translateY(-5px);
+}
+
+/* Offer label styling */
+.offer-label {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: orange;
+  padding: 5px 12px;
+  border-radius: 25px;
+  color: #003366; /* Dark Blue color */
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2; /* Ensure it's on top of the image */
+}
+
+/* Product image styling */
+.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Zoom effect on hover */
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Product name styling */
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 8px;
+  color: #333;
+}
+
+/* Compact text styling */
+.compact {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+/* Button group styling */
+.button-group {
+  margin-top: 10px;
+}
+
+.button-group .btn {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-group .btn:hover {
+  background-color: orange;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 1024px) {
+  .items {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row on tablets and small screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .items {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile devices */
+  }
+  
+  .product-name {
+    font-size: 1rem;
+  }
+
+  .compact {
+    font-size: 0.8rem;
+  }
+}
+/* Button group styling to make buttons appear in one line */
+.button-group {
+  display: flex;               /* Enables flexbox layout */
+  justify-content: space-between; /* Distributes buttons evenly with space between them */
+  gap: 10px;                    /* Adds space between the buttons */
+  margin-top: 10px;
+}
+
+/* Style for each individual button */
+.button-group .btn {
+  width: 48%;                    /* Each button takes up 48% of the width, so they fit side by side */
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #0f3e6f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-group .btn:hover {
+  background-color: orange;
+}
+
+/* Overlay to blur the background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+  backdrop-filter: blur(10px); /* Blurs the background content */
+  z-index: 10;
+}
+
+/* Popup container styling */
+.details-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 20; /* Higher than overlay */
+}
+
+/* Close button styling */
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Center the content inside details-section */
+.price-details, .shipping-info, .payment-info, .quantity-container, .total-price {
+  margin-bottom: 15px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-button {
+  background-color: #110b92;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.btn-go-to-checkout {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #0a19a0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+.success-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the popup horizontally */
+  background-color: #28a745; /* Green color for success */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;  /* Ensure it appears above other content */
+  transition: opacity 0.3s ease-in-out; /* Only transition opacity */
+  opacity: 1;  /* Start fully visible */
+
+  /* Hide the popup when it should fade out */
+  &.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+}
+
+//   /* Animation for fading in */
+//   @keyframes fadeIn {
+//     0% {
+//       opacity: 0;
+//       transform: translateY(-20px);
+//     }
+//     100% {
+//       opacity: 1;
+//       transform: translateY(0);
+//     }
+//   }
+
+//   animation: fadeIn 0.5s ease-out;
+// }

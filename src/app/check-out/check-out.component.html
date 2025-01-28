@@ -1,0 +1,59 @@
+<!-- Centered button to trigger checkout -->
+<div class="overlay" *ngIf="isCheckoutVisible">
+  <div class="overlay-content">
+    <img class="item" routerLink="/papad" src="../../assets/brn.jpg" alt="restaurants curated for pizza">
+  </div>
+</div>
+<div class="centered-button-container">
+  <button class="btn-proceed" (click)="showCheckout()">Proceed to Checkout</button>
+</div>
+<!-- Show progress bar before opening the checkout -->
+<!-- Show progress bar before opening the checkout -->
+<div *ngIf="isLoading" class="progress-container">
+  <div class="progress-bar" [style.width]="progressBarWidth"></div>
+</div>
+
+<!-- Overlay that will show the checkout popup -->
+<div *ngIf="showCheckoutPopup" class="overlay"></div>
+
+<!-- Checkout Popup -->
+<div *ngIf="showCheckoutPopup" class="checkout-container">
+  <div class="product-details">
+    <button class="btn-close" (click)="closePriceDetails()" routerLink="/papad">×</button>
+    <h3> Order-Summary </h3>
+    <div *ngFor="let product of products" class="product">
+      <div class="product-info">
+        <h4>{{ product.name }}</h4>
+        <p>₹{{ product.price | currency }} x {{ product.quantity }}</p>
+        <p>Total: ₹{{ product.price * product.quantity | currency }}</p>
+      </div>
+    </div>
+    <div class="total-price">
+      <h4>Total Price: ₹{{ totalPrice }}</h4>
+      <p>Discount: ₹{{ discount}}</p>
+      <h4>Final Price: ₹{{ finalPrice  }}</h4>
+    </div>
+  </div>
+
+  <div class="shipping-info">
+    <h3>Shipping Information</h3>
+    <input [(ngModel)]="shippingAddress" placeholder="Enter your shipping address" />
+  </div>
+
+  <div class="payment-info">
+    <h3>Payment Method</h3>
+    <label>
+      <input type="radio" [(ngModel)]="selectedPaymentMethod" value="Credit Card" /> Credit Card
+    </label>
+    <label>
+      <input type="radio" [(ngModel)]="selectedPaymentMethod" value="PayPal" /> PayPal
+    </label>
+  </div>
+
+  <div *ngIf="paymentStatus" class="payment-status">
+    <p>{{ paymentStatus }}</p>
+  </div>
+
+  <button class="btn-checkout" (click)="confirmOrder()" [disabled]="orderConfirmed" routerLink="/confirm-order">Confirm Order</button>
+
+</div>

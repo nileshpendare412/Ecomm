@@ -1,0 +1,237 @@
+
+body {
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.item {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 15px;
+}
+
+.item img {
+  width: 100%; /* Make the image fill the item width */
+  height: 100%; /* Make the image fill the item height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer-col {
+            margin: 10px 0;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #000;
+        }
+        .custom-primary {
+          background-color: rgb(14 , 56 ,103); /* Your custom primary color */
+          color: white;
+      }
+      
+      .custom-secondary {
+          background-color: rgb(14, 56, 103); /* Your custom secondary color */
+          color: white;
+      }
+      
+      .custom-button {
+          padding: 10px 20px; /* Customize padding */
+          border: none; /* Remove border */
+          border-radius: 5px; /* Rounded corners */
+          cursor: pointer; /* Pointer on hover */
+      }
+      
+      .papad-item {
+        text-align: center;
+        cursor: pointer;
+        margin: 10px;
+      }
+      
+      .papad-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        max-width: 80%;
+        text-align: center;
+      }
+      
+      .papad-modal-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+      
+      .papad-modal-item {
+        text-align: center;
+      }
+      
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        color: #000;
+        cursor: pointer;
+      }
+      
+
+      // for image
+
+      .sc-jBeBSR.gxFVgQ {
+        border: 2px solid rgb(38, 38, 143);  // Adds a black border with a thickness of 2px
+        padding: 10px;           // Adds some padding around the content inside the div
+        border-radius: 8px;      // Optional: Adds rounded corners
+      }
+      
+      .cart-container {
+        display: flex;            /* Use flexbox to align items horizontally */
+        justify-content: space-between;  /* Distribute items with space between */
+        align-items: center;      /* Align items vertically to the center */
+        padding: 10px;            /* Optional: Adds some padding around the container */
+      }
+      
+      .website-link {
+        color: #0c3c70;           /* Link color (blue) */
+        text-decoration: none;    /* Removes underline */
+        font-weight: bold;        /* Optional: Make the link bold */
+      }
+      
+      .website-link:hover {
+        text-decoration: underline; /* Adds underline on hover */
+      }
+      
+
+      // for new products
+
+      .product-list {
+        padding: 20px;
+      }
+      
+      .product-details {
+        margin-bottom: 20px;
+      }
+      
+      .image-gallery {
+        margin-top: 20px;
+      }
+      
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .image-grid img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        margin: 10px auto;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      .product-list {
+        text-align: center;
+      }
+      
+      .product-list .card {
+        height: 100%;
+      }
+      
+
+      // header
+      .filters-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between filters */
+        padding-top: 20px; /* Space between filters and top of page */
+        padding-bottom: 20px; /* Space below filters */
+      }
+      
+      .filter-pill {
+        background-color: #f0f0f0;
+        border-radius: 20px;
+        padding: 8px 16px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      
+      .banner-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px; /* Space between filters and banner */
+      }
+      
+      .banner-link {
+        display: block;
+        width: 100%;
+        max-width: 1300px;
+      }
+      
+      .banner-image-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+      
+      .banner-image {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+      }
+      
+      /* Header Line Styling */
+.header-line {
+  background-color: #f5f5f5;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-line h1 {
+  font-size: 1.8em;
+  color: #333;
+  font-weight: 600;
+}

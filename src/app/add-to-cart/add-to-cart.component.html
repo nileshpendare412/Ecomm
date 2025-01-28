@@ -1,0 +1,20 @@
+<div *ngIf="successMessageVisible" class="success-popup">
+  <p>{{ successMessage }}</p>
+</div>
+
+<div *ngFor="let item of cartItems; let i = index" class="cart-box">
+  <img [src]="item.image" alt="{{ item.name }}">
+  <div class="cart-details">
+    <p class="compact">Weight: 500g</p>
+    <p class="compact">Price: {{ item.price | currency }}</p>
+    <p>{{ item.discount | currency }}</p>
+    <p>{{ item.name }} - <span class="price">{{ item.price | currency }}</span></p>
+  </div>
+  <i class="fa fa-trash custom-icon" (click)="removeItem(i)"></i>
+</div>
+<div *ngIf="cartItems.length === 0">
+  <p class="empty-cart-message">Your Cart is empty</p>
+</div>
+
+<!-- Show the "Buy Now" button only when there are items in the cart -->
+<button *ngIf="cartItems.length > 0" class="button" routerLink="/check-out">Buy Now</button>

@@ -1,0 +1,328 @@
+// Parent container for items section
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Four items per row
+  gap: 16px; // Space between items
+  padding: 16px;
+
+  // Responsive adjustment for smaller screens
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Two items per row on tablet
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // Single column layout on mobile
+  }
+
+  .item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%; // Full height to keep cards uniform
+
+    img {
+      width: 100%; // Full width of item container
+      height: 200px; // Fixed height for consistency
+      object-fit: cover; // Keeps image aspect ratio while fitting
+      border-radius: 4px;
+      margin: 8px 0;
+    }
+
+    // Offer label styling
+    .offer-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: #ff5722;
+      color: white;
+      padding: 4px 8px;
+      font-size: 0.8em;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    // Button group styling
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+
+      .btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &.btn-primary {
+          background-color: #06407e;
+          color: white;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+// Parent container for items section
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Four items per row
+  gap: 16px; // Space between items
+  padding: 16px;
+
+  // Responsive adjustment for smaller screens
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Two items per row on tablet
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // Single column layout on mobile
+  }
+
+  .item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%; // Full height to keep cards uniform
+
+    img {
+      width: 100%; // Full width of item container
+      height: 200px; // Fixed height for consistency
+      object-fit: cover; // Keeps image aspect ratio while fitting
+      border-radius: 4px;
+      margin: 8px 0;
+    }
+
+    // Offer label styling
+    .offer-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: #ff5722;
+      color: white;
+      padding: 4px 8px;
+      font-size: 0.8em;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    // Button group styling
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+
+      .btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &.btn-primary {
+          background-color: #06407e;
+          color: white;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+// Overlay to create the blur effect on background (for page blur when the popup opens)
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); // semi-transparent overlay
+  backdrop-filter: blur(5px); // blur effect for background
+  z-index: 10; // behind the popup
+}
+
+// Centered details-section with a border and shadow
+.details-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centering */
+  width: 90%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0; /* Border around the section */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 20; /* On top of the overlay */
+  overflow: auto; /* To handle overflow content */
+  
+  // Price, shipping, and other info sections
+  .price-details, .shipping-info, .payment-info {
+    margin-bottom: 16px;
+    
+    h4 {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    
+    p {
+      font-size: 0.95em;
+      color: #555;
+      margin: 4px 0;
+    }
+
+    .discounted-price {
+      color: #ff5722;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: line-through;
+      margin-left: 8px;
+    }
+  }
+
+  // Quantity selection container
+  .quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+
+    .quantity-button {
+      padding: 8px 12px;
+      font-size: 1.2em;
+      cursor: pointer;
+      background-color: #0b3b6f; /* Button color */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #14457a; /* Darker shade on hover */
+      }
+    }
+
+    .quantity-input {
+      width: 60px;
+      text-align: center;
+      font-size: 1em;
+      padding: 4px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  }
+
+  // Total price styling
+  .total-price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+
+    strong {
+      color: #333;
+    }
+  }
+
+  // Checkout button styling
+  .btn-go-to-checkout {
+    display: inline-block;
+    padding: 12px 16px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #183c90; /* Checkout button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: orange; /* Darker green on hover */
+    }
+  }
+}
+
+/* Close button styling positioned in the top-right corner */
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #333; /* Dark color for visibility */
+}
+
+.success-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745; /* Green color for success */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears above other content */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Smooth fade-in and fade-out */
+  animation: fadeInOut 3s ease-in-out 1; /* Animation to fade in and out */
+
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  /* Keyframes for fading in and out */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(20px);
+    }
+  }
+
+  /* Optional: When the message is visible, fade in */
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeInOut 3s ease-in-out 1;
+  }
+}

@@ -1,0 +1,105 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Footer Desing</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <!-- </head>  -->
+  <!-- <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page with Footer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 20px;
+        }
+        .item img {
+            width: 100%;
+            max-width: 400px; /* Adjust as needed */
+            height: auto;
+            margin: 10px;
+        }
+        .footer {
+            margin-top: 15px;
+            width: 100%;
+            padding: 100px 15px;
+            background: darkblue;
+            color: white;
+            display: flex; 
+            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+        }
+        .footer-col {
+            flex: 1;
+            min-width: 200px; /* Minimum width for each column */
+            text-align: center;
+            margin: 10px; /* Spacing between columns */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer h4 {
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        .footer-col a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body> -->
+
+    <footer class="footer">
+        <div class="footer-col">
+            <h4> Shop Cart</h4>
+            <ul>
+                <!-- <li class="item"><a class="link" routerLink="/about-us"> </a> About Us </li>
+                <li class="item"><a class="link" routerLink="/service"> </a> Services </li> -->
+                <li><a [routerLink]="'/about-us'">About Us</a></li>
+                <li><a [routerLink]="'/service'">Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Get Help</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Payment Status</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Online Shop</h4>
+            <ul>
+                <li><a href="#">Pickles</a></li>
+                <li><a href="#">Kukure</a></li>
+                <li><a href="#">Numkeen</a></li>
+                <li><a href="#">All Snacks</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Social Links</h4>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>

@@ -1,0 +1,300 @@
+.items {
+    margin-top: 30px; // Add margin-top to create space between navbar and products
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 20px; // Add space between items
+  
+    .item {
+      margin-bottom: 20px;
+      flex: 1 1 calc(25% - 20px); // Each item takes 25% width minus the gap
+      box-sizing: border-box;
+      border: 1px solid #ddd; // Add a border around the item
+      border-radius: 8px; // Rounded corners for items
+      overflow: hidden; // To ensure the image and content stay within the rounded borders
+      transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth hover transition
+  
+      // Center the text inside the item
+      text-align: center;
+  
+      // Image styling
+      img {
+        width: 100%;
+        height: 200px; // Fixed height to maintain uniformity
+        object-fit: cover;
+        border-bottom: 1px solid #ddd; // Separate image from content with a border
+        transition: transform 0.3s ease; // Smooth hover transition for images
+      }
+  
+      // Hover effect for items
+      &:hover {
+        transform: translateY(-5px); // Lift the item slightly on hover
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Add shadow on hover
+      }
+  
+      // Product info
+      h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px;
+        color: #333;
+      }
+  
+      .compact {
+        font-size: 14px;
+        margin: 5px 10px;
+        color: #666;
+      }
+  
+      // Button group styling
+      .button-group {
+        display: flex;
+        justify-content: center; // Center the buttons
+        gap: 10px; // Space between the buttons
+        margin-top: 10px;
+        padding: 10px;
+      }
+  
+      .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        
+        &.btn-primary {
+          background-color: #0e4886;
+          color: white;
+          border: none;
+  
+          &:hover {
+            background-color: orange;
+          }
+        }
+      }
+    }
+  }
+  
+  // For smaller screens (like tablets or mobiles), adjust the layout to show fewer items per row
+  @media screen and (max-width: 1024px) {
+    .items .item {
+      flex: 1 1 calc(50% - 20px); // 2 items per row
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .items .item {
+      flex: 1 1 100%; // 1 item per row
+    }
+  }
+  
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: space-between;
+}
+
+.item {
+    flex: 1 1 calc(25% - 20px); /* 4 items per row */
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative; /* Required for absolute positioning of the offer label */
+    max-width: 25%; /* Ensures 4 items per row */
+}
+
+.product-image {
+    width: 100%; /* Makes the image take up the full width of the item */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 4px; /* Optional: rounds the corners of the image */
+}
+
+.offer-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.offer-text {
+    font-size: 14px;
+}
+
+.compact {
+    font-size: 12px;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Styles for Blur Effect */
+.blurred {
+  filter: blur(5px);
+}
+
+/* Overlay Style */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Popup Style */
+.details-section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.btn-close {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.quantity-button {
+  background-color: #211793; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-go-to-checkout {
+  background-color: #062675; /* Green background */
+  color: white; /* White text */
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Hover effect */
+.btn-go-to-checkout:hover {
+  background-color: orange; /* Darker green on hover */
+}
+
+/* Focus effect */
+.btn-go-to-checkout:focus {
+  outline: none;
+  box-shadow: 0 0 5px #218838;
+}
+
+.success-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;  // Green color
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;  // Ensure it appears above other content
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+
+  // Optional: Fading effect for message disappearance
+  &.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.items {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  
+  .item {
+    flex: 1 1 calc(25% - 20px);
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-group {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #0e4886;
+      color: white;
+      border: none;
+      
+      &:hover {
+        background-color: orange;
+      }
+    }
+  }
+}

@@ -1,0 +1,454 @@
+.service {
+    background-color: #ffffff; // White background for contrast
+    padding: 2rem;
+   // border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+
+    h2 {
+        font-size: 2rem;
+        color: #0d3d89; // Dark blue for headers
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555555; // Dark gray for body text
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .service-item {
+            background-color: #f9f9f9; // Light gray background for items
+            border-left: 5px solid #0d3d89; // Left border for emphasis
+            border-radius: 5px;//
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            h3 {
+                font-size: 1.5rem;
+                color: #0d3d89; // Consistent color for subheadings
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                color: #666666; // Medium gray for item descriptions
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    .contact-us {
+        background-color: #0d3d89; // Button color
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #ff9800; // Orange on hover
+        }
+    }
+}
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-item {
+    display: flex;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.service-image {
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjusted space between items */
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.service-item {
+    flex: 1 1 calc(48% - 10px); /* Two columns with a more balanced width */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 700px;
+    margin-bottom: 20px; /* Adds vertical space between rows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    font-size: 18px;
+    color: #26108b;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-us {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us:hover {
+    background-color: #ff4500;
+}
+
+.service {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.banner-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.marquee-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #003366;
+    color: #fff;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.fixed-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+.scrolling-content {
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    animation: scroll 20s linear infinite;
+}
+
+.scrolling-content p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    padding-left: 100%; /* Start text off-screen */
+}
+
+/* Marquee animation */
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%); /* Scroll across the full width of the container */
+    }
+}
+
+/* Styling for Scrolling Main Heading */
+.scrolling-heading {
+    background-color: #ed6e21;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.scrolling-heading marquee {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Styling for Service Sections */
+.service-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.services {
+    display: grid;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h2 {
+    color: #ed6e21;
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Call to Action Button */
+.shop-now {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #ed6e21;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.shop-now:hover {
+    background-color: #d65c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .scrolling-heading marquee {
+        font-size: 1em;
+    }
+}
+
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  /* Marquee Styling */
+  .marquee-wrap {
+    overflow: hidden; /* Ensures text doesn't overflow */
+    white-space: nowrap; /* Prevents text wrapping */
+    position: relative;
+    background: #ffe6cc; /* Light orange background */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 15px; /* Reduced space below marquee */
+  }
+  
+  .marquee-wrap p {
+    display: inline-block;
+    color: #0044cc; /* Blue text for marquee */
+    font-size: 20px;
+    font-weight: bold;
+    animation: marquee 15s linear infinite; /* Smooth scrolling animation */
+  }
+  
+  /* Updated Animation for Right to Left */
+  @keyframes marquee {
+    from {
+      transform: translateX(100%); /* Starts text off-screen on the right */
+    }
+    to {
+      transform: translateX(-100%); /* Ends text off-screen on the left */
+    }
+  }
+  
+  /* Business Section Styling */
+  .online-business-wrap {
+    position: relative;
+    background: #e6fff5; /* Light blue background */
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // width: 1500px;
+    align-items: center;
+    height: 400px;
+    width: 1500%; /* Responsive width */
+    max-width: 1500px; /* Max width for larger screens */
+    margin: 10px auto; /* Reduced space between sections */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Modern shadow effect */
+  }
+  
+  .online-business-wrap h1 {
+    color: #0044cc; /* Blue for main text */
+    font-size: 28px;
+    margin-bottom: 15px; /* Spacing below heading */
+  }
+  
+  .online-business-wrap h1 span {
+    color: #ff6600; /* Orange for highlighted words */
+    font-weight: bold;
+  }
+  
+  .online-business-wrap p {
+    color: #555; /* Subtle gray for paragraph text */
+    font-size: 16px; /* Smaller text size for description */
+    margin-top: 10px;
+    line-height: 1.6; /* Improves readability */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .online-business-wrap {
+      height: auto; /* Allow dynamic height on smaller screens */
+      padding: 20px;
+    }
+  
+    .online-business-wrap h1 {
+      font-size: 22px;
+    }
+  
+    .online-business-wrap p {
+      font-size: 14px;
+    }
+  
+    .marquee-wrap p {
+      font-size: 18px;
+    }
+  }
+  
+  .service-item {
+    position: relative; /* Ensure the "Explore" text can be positioned inside the service-item */
+    width: 300px; /* Adjust width as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .service-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .service-content p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Explore text and icon position */
+  .explore-container {
+    position: absolute;
+    bottom: 10px; /* Adjust to move it further down if needed */
+    right: 10px;  /* Move it to the right corner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .explore-container h1 {
+    font-size: 18px;
+    margin-right: 5px; /* Space between text and icon */
+    color: orange;
+  }
+  
+  .explore-icon {
+    font-size: 20px;
+    color: orange; /* Change color as needed */
+  }
+  
+  

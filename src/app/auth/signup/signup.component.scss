@@ -1,0 +1,46 @@
+/* styles.css or your component-specific CSS file */
+
+.signup-container {
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding for spacing */
+    max-width: 400px; /* Limit width */
+    border: 1px solid #ccc; 
+    margin: auto; /* Center the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2 {
+    color: #08347f; /* Set header color */
+    text-align: center; /* Center the heading */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    color: #08347f; /* Set label color */
+    display: block; /* Block display for labels */
+}
+
+input {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #08347f; /* Input border color */
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+button {
+    background-color: #08347f; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: orange; /* Darker shade on hover */
+}

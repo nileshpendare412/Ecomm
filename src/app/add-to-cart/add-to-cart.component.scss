@@ -1,0 +1,152 @@
+.cart-box {
+  margin-top: 10px;
+  display: flex; /* Make the box a flex container */
+  align-items: center; /* Vertically align the items */
+  border: 1px solid darkblue; /* Border around the box */
+  padding: 12px; /* Reduced padding to make the box smaller */
+  margin-bottom: 16px; /* Space between multiple items or the empty message */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  max-width: 350px; /* Optional: You can limit the width of the box */
+  position: relative; /* For positioning the trash icon inside */
+}
+
+.cart-box img {
+  max-width: 100px; /* Increased image size */
+  height: 100px; /* Set a fixed height for the image */
+  border-radius: 4px; /* Optional: Round image edges */
+  margin-right: 16px; /* Increase space between image and text */
+}
+
+.cart-box .price {
+  font-weight: bold;
+  color: black; /* Color for the price */
+}
+
+.cart-box .cart-details {
+  flex-grow: 1; /* Make the text container take the remaining space */
+}
+
+.custom-icon {
+  position: absolute; /* Position relative to the .cart-box */
+  top: 8px; /* Position the icon 8px from the top */
+  right: 8px; /* Position the icon 8px from the right side */
+  cursor: pointer;
+  color: #e74c3c; /* Red color for delete icon */
+  font-size: 18px;
+}
+
+.custom-icon:hover {
+  color: #c0392b; /* Darker red on hover */
+}
+
+.btn-go-to-checkout {
+  background-color: rgb(5, 5, 131); /* Green button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-go-to-checkout:hover {
+  background-color: orange; /* Darker green when hovering */
+}
+
+/* Success popup styling */
+.success-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red; /* Green color for success */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears above other content */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Smooth fade-in and fade-out */
+  animation: fadeInOut 3s ease-in-out 1; /* Animation to fade in and fade out */
+
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  /* Keyframes for fading in and out */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(20px);
+    }
+  }
+
+  /* Optional: When the message is visible, fade in */
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeInOut 3s ease-in-out 1;
+  }
+}
+
+
+
+
+/* Styling for when the cart is empty */
+.empty-cart-message {
+  text-align: center; /* Center the text */
+  font-size: 18px; /* Set the font size */
+  color: #777; /* Light grey color for the text */
+  margin-top: 20px; /* Add space above */
+  font-weight: bold; /* Make it bold */
+  padding: 20px; /* Padding around the text */
+  background-color: #f9f9f9; /* Light background color */
+  border: 1px solid #ccc; /* Border around the message */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Styling for the "Buy Now" button */
+.button {
+  margin-left: 15px;
+  background-color: darkblue; /* Green background for the button */
+  color: white; /* White text */
+  padding: 14px 25px; /* Padding around the text */
+  font-size: 16px; /* Set the font size */
+  border: none; /* Remove the default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  text-align: center; /* Center the text */
+  display: inline-block; /* Keep the button inline */
+  margin-top: 20px; /* Add space above the button */
+  width: 100%; /* Make the button take up the full width */
+  max-width: 300px; /* Max width for button */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for the button */
+.button:hover {
+  background-color: orange; /* Darker green when hovered */
+}
+
+/* Optional: Make the button's width responsive */
+@media (max-width: 600px) {
+  .button {
+    width: 100%; /* Full width on small screens */
+  }
+}
+

@@ -1,0 +1,108 @@
+/* Overlay for background blur */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Apply blur to the background */
+    z-index: 1000;
+  }
+  
+  /* Progress Bar Container */
+  .progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    height: 5px;
+    background-color: orange;
+    width: 0%;
+    transition: width 0.1s; /* Smooth transition of width change */
+  }
+  
+  /* Order Confirmed Popup */
+  .order-confirmed-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  /* Close Button */
+  .btn-close {
+    background-color: #09058e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-close:hover {
+    background-color: orange;
+  }
+  
+  /* Progress Bar Container */
+.progress-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    height: 5px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    height: 100%;
+    background-color: orange;
+    width: 0;
+    transition: width 0.1s ease-out;  /* Smooth animation for width change */
+  }
+  
+  .confirmation-message {
+    color: green;
+    font-weight: bold;
+}
+
+.order-confirmed-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    margin: 20px 0;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4caf50; /* Green color for progress */
+    transition: width 0.5s ease-in-out;
+  }
+  
